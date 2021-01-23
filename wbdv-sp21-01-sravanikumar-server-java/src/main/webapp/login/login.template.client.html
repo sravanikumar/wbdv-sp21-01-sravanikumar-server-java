@@ -3,8 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="login.style.client.css" rel="stylesheet"/>
 </head>
 <body>
+    <div class="container">
+        <h1>
+            Sign In
+        </h1>
 
+        <form>
+            <p class="form-floating">
+                <input class="form-control" id="floatingInput" placeholder="name@example.com"/>
+                <label for="floatingInput">Username</label>
+            </p>
+
+            <p class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
+                <label for="floatingPassword">Password</label>
+            </p>
+
+            <div class="d-grid gap-2 mx-auto">
+                <button class="btn btn-primary">
+                    Sign in
+                </button>
+            </div>
+
+            <p>
+            <a href="#">
+                Forgot Password?
+            </a>
+
+            <a href="#" class="float-end">
+                Sign Up
+            </a>
+            </p>
+
+            <p>
+                <a href="../index.html">
+                    Cancel
+                </a>
+            </p>
+        </form>
+    </div>
 </body>
 </html>
