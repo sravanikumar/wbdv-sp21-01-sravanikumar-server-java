@@ -2,29 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Register</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="login.style.client.css" rel="stylesheet"/>
 </head>
-
 <body>
     <div class="container">
-        <h1>
-            Sign In
-        </h1>
+        <h1>Sign Up</h1>
 
         <div class="mb-3 row">
             <label
-                   class="col-sm-2 col-form-label float-end">
+                    class="col-sm-2 col-form-label">
                 Username
             </label>
 
             <div class="col-sm-10">
                 <input class="form-control"
-                       id="username"
-                       />
+                       id="usernameInput"
+                       placeholder="skumar"/>
             </div>
-
         </div>
 
         <div class="mb-3 row">
@@ -35,36 +30,37 @@
 
             <div class="col-sm-10">
                 <input type="password"
+                       id="passwordInput"
                        class="form-control"
-                       id="password"
-                />
+                       placeholder="pass@123!?"/>
             </div>
 
         </div>
 
         <div class="mb-3 row">
+            <label
+                    class="col-sm-2 col-form-label">
+                Verify Password
+            </label>
+
+            <div class="col-sm-10">
+                <input type="password"
+                       id="verifyPasswordInput"
+                       class="form-control"
+                       placeholder="pass@123!?"/>
+            </div>
+        </div>
+
+
+        <div class="mb-3 row">
             <div class="col-sm-2">
-<!--            space so that sign in button is to the right-->
+                <!--            space so that sign in button is to the right-->
             </div>
 
             <div class="d-grid gap-2 mx-auto col-sm-10">
                 <a class="btn btn-primary"
                    href="../profile/profile.template.client.html"
                    role="button">
-                    Sign in
-                </a>
-            </div>
-        </div>
-
-
-        <div class="mb-3 row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-10">
-                <a href="#">
-                    Forgot Password?
-                </a>
-
-                <a href="../register/register.template.client.html" class="float-end">
                     Sign Up
                 </a>
             </div>
@@ -73,12 +69,16 @@
         <div class="mb-3 row">
             <div class="col-sm-2"></div>
             <div class="col-sm-10">
-                <a href="../index.html">
+                <a href="../login/login.template.client.html">
+                    Login
+                </a>
+
+                <a href="../index.html" class="float-end">
                     Cancel
                 </a>
             </div>
         </div>
-    </div>
 
+    </div>
 </body>
 </html>
