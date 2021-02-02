@@ -1,4 +1,33 @@
-.blue-background {
+.offwhite-background {
+    background-color: floralwhite;
+}
+
+.lightblue-background {
+    background-color: aliceblue;
+}
+
+.nav-font-dark {
+    color : white;
+}
+
+.nav-item-editor {
+    background-color: darkgray;
+    margin: 10px;
+    padding: 5px;
+    font-size: larger;
+}
+
+.nav-item-editor-active {
+    background-color: darkgreen;
+    margin: 5px;
+}
+
+.nav-pills-editor {
     background-color: cadetblue;
-    color: floralwhite;
+    margin: 5px;
+}
+
+.nav-pills-editor-active {
+    background-color: cornflowerblue;
+    margin: 5px;
 }
