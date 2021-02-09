@@ -11,6 +11,13 @@ let tableBody
 
 let users = [{username: "skumar", password: "pass", firstName: "Srav", lastName: "Kumar", role: "ADMIN"}];
 
+let selectedUser = null
+function selectUser(event) {
+    let editBtn = $(event.target)
+    let theId = editBtn.attr("id")
+    // selectedUser = users.find(user => user._id === theId)
+}
+
 function renderUsers(users) {
     tableBody.empty()
 
@@ -25,16 +32,21 @@ function renderUsers(users) {
               <td class="wbdv-last-name">${user.lastName}</td>
               <td class="wbdv-role">${user.role}</td>
               <td class="wbdv-actions">
-                <button class="wbdv-remove">
+                <button class="wbdv-remove" id="delete${i}">
                   <i class="fa-2x fa fa-times"></i>
                 </button>
-                <button class="wbdv-edit">
+                <button class="wbdv-edit" id="edit${i}">
                     <i class="fa-2x fa fa-pencil"></i>
                 </button>
               </td>
             </tr>
             `)
     }
+
+    $(".wbdv-remove")
+        .click(deleteUser)
+    $(".wbdv-edit")
+        .click(selectUser)
 }
 
 
