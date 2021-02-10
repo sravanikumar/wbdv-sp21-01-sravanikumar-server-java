@@ -14,10 +14,38 @@ let users = [
     // {username: "skumar", password: "pass", firstName: "Srav", lastName: "Kumar", role: "ADMIN"}
     ];
 
+function checkUser(user) {
+    if (user.username === "") {
+        alert("Please enter a username!")
+        return 1
+    } else if (user.password === "") {
+        alert("Please enter a password!")
+        return 1
+    } else if (user.firstName === "") {
+        alert("Please enter a first name!")
+        return 1
+    } else if (user.lastName === "") {
+        alert("Please enter a last name!")
+        return 1
+    } else {
+        return 0
+    }
+}
+
 function createUser(user) {
+
+    if (checkUser(user) === 1) {
+        return
+    }
+
     userAdminService.createUser(user)
         .then(function (actualUser) {
             users.push(actualUser)
+            $userNameFld.val("")
+            $passwordFld.val("")
+            $firstNameFld.val("")
+            $lastNameFld.val("")
+            $roleFld.val("ADMIN")
             renderUsers(users)
             }
         )
@@ -87,6 +115,17 @@ function renderUsers(users) {
 }
 
 function updateUser() {
+
+    if ($userNameFld.val() === "") {
+        return alert("Please enter a username!")
+    } else if ($passwordFld.val() === "") {
+        return alert("Please enter a password!")
+    } else if ($firstNameFld.val() === "") {
+        return alert("Please enter a first name!")
+    } else if ($lastNameFld.val() === "") {
+        return alert("Please enter a last name!")
+    }
+
     selectedUser.username = $userNameFld.val()
     selectedUser.password = $passwordFld.val()
     selectedUser.firstName = $firstNameFld.val()
@@ -127,12 +166,6 @@ function main() {
                 lastName: $lastNameFld.val(),
                 role: $roleFld.val()
             })
-
-            $userNameFld.val("")
-            $passwordFld.val("")
-            $firstNameFld.val("")
-            $lastNameFld.val("")
-            $roleFld.val("ADMIN")
         }
     )
 
