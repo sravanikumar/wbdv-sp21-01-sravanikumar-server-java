@@ -20,6 +20,7 @@ function AdminUserServiceClient() {
     }
 
     function findAllUsers() {
+        console.log("enters find all users")
         return fetch(self.url)
             .then(function (response) {
                 return response.json()
