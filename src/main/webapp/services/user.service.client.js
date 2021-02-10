@@ -20,14 +20,14 @@ function AdminUserServiceClient() {
     }
 
     function findAllUsers() {
-        console.log("enters find all users")
         return fetch(self.url)
-            .then(function (response) {
-                return response.json()
-            })
+            .then(response => response.json())
     }
 
-    function findUserById(userId) {} // TODO: find user by id
+    function findUserById(userId) {
+        return fetch(`${self.url}/${userId}`)
+            .then(response => response.json())
+    }
 
     function updateUser(userId, user) {
         return fetch(`${self.url}/${userId}`, {

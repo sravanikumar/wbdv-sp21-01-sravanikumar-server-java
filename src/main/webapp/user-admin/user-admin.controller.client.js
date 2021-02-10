@@ -41,11 +41,13 @@ function createUser(user) {
     userAdminService.createUser(user)
         .then(function (actualUser) {
             users.push(actualUser)
+
             $userNameFld.val("")
             $passwordFld.val("")
             $firstNameFld.val("")
             $lastNameFld.val("")
             $roleFld.val("ADMIN")
+
             renderUsers(users)
             }
         )
@@ -57,6 +59,14 @@ function selectUser(event) {
     let editBtn = $(event.target)
     let theId = editBtn.attr("id")
     selectedUser = users.find(user => user._id === theId)
+    // userAdminService.findUserById(theId)
+    //     .then(function (selectedUser) {
+    //         $userNameFld.val(selectedUser.username)
+    //         $passwordFld.val(selectedUser.password)
+    //         $firstNameFld.val(selectedUser.firstName)
+    //         $lastNameFld.val(selectedUser.lastName)
+    //         $roleFld.val(selectedUser.role)
+    //     })
 
     $userNameFld.val(selectedUser.username)
     $passwordFld.val(selectedUser.password)
