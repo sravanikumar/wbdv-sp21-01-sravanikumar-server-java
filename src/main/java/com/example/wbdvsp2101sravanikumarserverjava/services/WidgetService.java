@@ -12,10 +12,10 @@ public class WidgetService {
     private List<Widget> widgets = new ArrayList<Widget>();
 
     {
-        Widget w1 = new Widget(123l, "ABC123", "HEADING", "Welcome to Widgets");
-        Widget w2 = new Widget(234l, "ABC234", "PARAGRAPH", "This is a paragraph");
-        Widget w3 = new Widget(345l, "ABC234", "HEADING", "Welcome to WebDev");
-        Widget w4 = new Widget(456l, "ABC234", "PARAGRAPH", "Lorem ipsum");
+        Widget w1 = new Widget(123l, "ABC123", "HEADING", "Welcome to Widgets", 2);
+        Widget w2 = new Widget(234l, "ABC234", "PARAGRAPH", "This is a paragraph", 1);
+        Widget w3 = new Widget(345l, "ABC234", "HEADING", "Welcome to WebDev", 3);
+        Widget w4 = new Widget(456l, "ABC234", "PARAGRAPH", "Lorem ipsum", 4);
         widgets.add(w1);
         widgets.add(w2);
         widgets.add(w3);

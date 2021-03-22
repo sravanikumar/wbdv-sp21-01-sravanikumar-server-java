@@ -18,11 +18,12 @@ public class Widget {
     public Widget() {
     }
 
-    public Widget(Long id, String topicId, String type, String text) {
+    public Widget(Long id, String topicId, String type, String text, Integer size) {
         this.id = id;
         this.type = type;
         this.text = text;
         this.topicId = topicId;
+        this.size = size;
     }
 
     public Widget(String name, Long id, String type, Integer widgetOrder, String text, String src, Integer size, Integer width, Integer height, String cssClass, String style, String value, String topicId) {
