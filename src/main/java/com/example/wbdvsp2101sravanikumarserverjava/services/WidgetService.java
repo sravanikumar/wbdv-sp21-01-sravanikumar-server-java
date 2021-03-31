@@ -30,10 +30,7 @@ public class WidgetService {
 
     // implement crud operations
     public Widget createWidgetForTopic(Widget widget) {
-        Long id = (new Date()).getTime();
-        widget.setId(id);
-        widgets.add(widget);
-        return widget;
+        return repository.save(widget);
     }
 
     public List<Widget> findAllWidgets() {
