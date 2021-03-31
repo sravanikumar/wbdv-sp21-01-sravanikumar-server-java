@@ -35,18 +35,13 @@ public class WidgetService {
         widgets.add(widget);
         return widget;
     }
+
     public List<Widget> findAllWidgets() {
         return repository.findAllWidgets();
     }
 
     public List<Widget> findWidgetsForTopic(String topicId) {
-        List<Widget> ws = new ArrayList<Widget>();
-        for(Widget w: widgets) {
-            if(w.getTopicId().equals(topicId)) {
-                ws.add(w);
-            }
-        }
-        return ws;
+        return repository.findWidgetsForTopic(topicId);
     }
 
     public Widget findWidgetById(Long id) {
